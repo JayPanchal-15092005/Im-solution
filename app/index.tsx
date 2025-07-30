@@ -1,34 +1,4 @@
-// import { useRef, useState } from "react";
-// import { StyleSheet, View } from "react-native";
-// import { WebView } from "react-native-webview";
-
-// export default function Index() {
-
-//   const webViewRef = useRef(null);
-//   const [canGoBack, setCanGoBack] = useState(false);
-
-//   return (
-//     <View style={styles.container}>
-//       <WebView
-//       source={{ uri: 'http://103.250.160.75:5003/login'}}
-//       style={{ flex: 1}}
-//       javaScriptEnabled={true}
-//       domStorageEnabled={true}
-//       startInLoadingState={true}
-//       allowFileAccessFromFileURLs={true}
-//       allowsFullscreenVideo={true}
-//       mediaPlaybackRequiresUserAction={false}
-//       />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//   }
-// })
-
+import { StatusBar } from "expo-status-bar";
 import { useEffect, useRef, useState } from "react";
 import { BackHandler, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
@@ -53,6 +23,7 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+    <StatusBar style="dark" backgroundColor="#000000" />
       {/* Optional In-App Back Button */}
       
       {/* {canGoBack && (
